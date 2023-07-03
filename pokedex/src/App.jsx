@@ -36,7 +36,7 @@ function App() {
                 <ScrollToTop />
                 <Routes>
 
-                    <Route index element={<Pokedex/>} />
+                    <Route path="/" element={<Pokedex/>} />
                     <Route path="/pokemon/:id" element={<PokemonDetail/>} />
                     <Route path="/favorite" element={<Favorites/>} />
 

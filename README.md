@@ -53,6 +53,8 @@ SCSS Variables: Sass variables have been used to facilitate code updates and wer
 
 - List view/Grid view: 
 
+- useNavigate: https://reactrouter.com/en/main/hooks/use-navigate & https://www.geeksforgeeks.org/reactjs-usenavigate-hook/
+
 5. DEVELOPMENT PROCESS
 
 Phase 1:
