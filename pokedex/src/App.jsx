@@ -1,12 +1,12 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { createContext, useState } from "react";
 import { PokemonProvider } from "./context/PokemonProvider";
+import ScrollToTop from "./components/scrollToTop/scrollToTop";
 
 import Topbar from "./components/topbar/Topbar"
 import Pokedex from "./views/Pokedex"
 import PokemonDetail from "./views/PokemonDetail"
 import Favorites from "./views/Favorites"
-
 
 import './scss/global.scss'
 
@@ -33,6 +33,7 @@ function App() {
                     <Topbar />
                 </header>
                 
+                <ScrollToTop />
                 <Routes>
 
                     <Route index element={<Pokedex/>} />
