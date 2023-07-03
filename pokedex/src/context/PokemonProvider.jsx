@@ -3,18 +3,18 @@ import { PokemonContext } from "./PokemonContext"
 
 export const PokemonProvider = ({children}) => {
 
-    //We create useState to store the first 30 pokemons
+    //We create useState to store the first 12 pokemons
     const [allPokemons, setAllPokemons] = useState([])
 
-    // Limit + offset limit the amount of pokemons loaded, in this case 30
+    // Limit + offset limit the amount of pokemons loaded, in this case 12
     const [offset, setOffset] = useState(0);
     
-    // Calling first 30 pokemons from the API
+    // Calling first 12 pokemons from the API
     const getAllPokemons = async(limit, offset) => {
 
         const baseURL = 'https://pokeapi.co/api/v2/';
 
-        // Const res gets the pokemons from the url passed. It only paints 30 because it has been previously stablish (const above baseURL). Offset is the starting point, first is 0, then it will be 31, etc. 
+        // Const res gets the pokemons from the url passed. It only paints 12 because it has been previously stablish (const above baseURL). Offset is the starting point, first is 0, then it will be 13, etc. 
         const res = await fetch(`${baseURL}pokemon?limit=${limit}&offset=${offset}`);
         const data = await res.json();
 
@@ -34,7 +34,7 @@ export const PokemonProvider = ({children}) => {
 
 
     useEffect(() => {
-        getAllPokemons(10, offset)
+        getAllPokemons(12, offset)
     }, [offset])
 
 

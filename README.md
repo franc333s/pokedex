@@ -46,10 +46,12 @@ SCSS Variables: Sass variables have been used to facilitate code updates and wer
 - Promise: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
 - Async functions: https://developer.mozilla.org/es/docs/Learn/JavaScript/Asynchronous/Introducing
 & https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction
+
 - Pagination: https://www.freecodecamp.org/news/build-a-custom-pagination-component-in-react/, https://www.simplilearn.com/tutorials/reactjs-tutorial/pagination-in-reactjs#:~:text=Pagination%20in%20React%20JS%20is,make%20group%20requests%20for%20data.
 
 - Dark/light themes: https://www.youtube.com/watch?v=VzF2iTTc0MA
 
+- List view/Grid view: 
 
 5. DEVELOPMENT PROCESS
 

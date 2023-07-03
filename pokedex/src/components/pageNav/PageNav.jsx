@@ -8,8 +8,8 @@ function PageNav() {
 
     const handleNextPage = async () => {
         //Function to go to next page
-        const newOffset = offset + 10;
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${newOffset}`);
+        const newOffset = offset + 12;
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=12&offset=${newOffset}`);
         const data = await res.json();
 
         const promises = data.results.map(async (pokemon) => {
@@ -26,9 +26,9 @@ function PageNav() {
 
     const handlePreviousPage = async () => {
         //Function to go back to the previous page
-        const newOffset = offset -10;
+        const newOffset = offset -12;
 
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${newOffset}`);
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=12&offset=${newOffset}`);
         const data = await res.json();
 
         const promises = data.results.map(async (pokemon) => {
