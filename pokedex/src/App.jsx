@@ -1,13 +1,17 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import { createContext, useState } from "react";
+import { PokemonProvider } from "./context/PokemonProvider";
+
 import Topbar from "./components/topbar/Topbar"
 import Pokedex from "./views/Pokedex"
 import PokemonDetail from "./views/PokemonDetail"
 import Favorites from "./views/Favorites"
+
+
 import './scss/global.scss'
-import { PokemonProvider } from "./context/PokemonProvider";
-import { createContext, useState } from "react";
 
 export const ThemeContext = createContext(null);
+
 
 function App() {
 

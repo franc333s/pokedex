@@ -48,7 +48,7 @@ SCSS Variables: Sass variables have been used to facilitate code updates and wer
 & https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction
 - Pagination: https://www.freecodecamp.org/news/build-a-custom-pagination-component-in-react/, https://www.simplilearn.com/tutorials/reactjs-tutorial/pagination-in-reactjs#:~:text=Pagination%20in%20React%20JS%20is,make%20group%20requests%20for%20data.
 
-- Dark/light themes: https://dev.to/whitep4nth3r/the-best-lightdark-mode-theme-toggle-in-javascript-368f
+- Dark/light themes: https://www.youtube.com/watch?v=VzF2iTTc0MA
 
 
 5. DEVELOPMENT PROCESS
@@ -56,7 +56,7 @@ SCSS Variables: Sass variables have been used to facilitate code updates and wer
 Phase 1:
 In the first phase of development, the React project with Vite has been launched, and folders have been organized to include only the files that are going to be used.
 
-Routes have been included, the initial organization of the App.jsx file has been done, the view of Pokedex.jsx has been prepared to render the content, and the minimum viable components for this to happen (CardPokemon.jsx, PokemonList.jsx, Topbar.jsx) have been created. The context has been created (with the PokemonContext.jsx and PokemonProvider.jsx components) to connect the API to this app.
+Routes have been included, the initial organization of the App.jsx file has been done, the view of Pokedex.jsx has been prepared to render the content, and the minimum viable components for this to happen (CardPoke  mon.jsx, PokemonList.jsx, Topbar.jsx) have been created. The context has been created (with the PokemonContext.jsx and PokemonProvider.jsx components) to connect the API to this app.
 
 
 Phase 2:
