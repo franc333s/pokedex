@@ -1,4 +1,7 @@
+import PageNav from "../components/pageNav/PageNav";
 import { PokemonList } from "../components/pokemonList/pokemonList";
+
+
 
 function Pokedex() {
 
@@ -6,7 +9,10 @@ function Pokedex() {
 		<>
             <div className="">
                 <PokemonList />
-            </div>
+            </div>  
+
+            <PageNav />
+       
         </>
     )
 }

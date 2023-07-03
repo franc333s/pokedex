@@ -3,14 +3,13 @@ import { PokemonContext } from "../../context/PokemonContext"
 import CardPokemon from '../cardPokemon/CardPokemon'
 
 export const PokemonList = () => {
-    
-    const {allPokemons} = useContext(PokemonContext)
-
+    const { allPokemons } = useContext(PokemonContext);
+  
     return (
-        <div className="card-list-pokemon container">
-            
-            {allPokemons.map(pokemon => 
-                <CardPokemon pokemon={pokemon} key={pokemon.id}/>)}
-        </div>
-    )
-}
+      <div className="">
+        {allPokemons.map((pokemon, index) => (
+          <CardPokemon pokemon={pokemon} key={`${index}-${pokemon.id}`} /> 
+        ))}
+      </div>
+    );
+  };

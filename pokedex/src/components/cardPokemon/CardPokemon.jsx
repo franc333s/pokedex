@@ -1,31 +1,44 @@
 import { Link } from 'react-router-dom';
 
+
 const CardPokemon = ({pokemon}) => {
+
 
 	return (
 		<>
-		<Link to={`/pokemon/${pokemon.id}`} className='card-pokemon'>
+		<Link to={`/pokemon/${pokemon.id}`} className=''>
 			
-			<div className='card-img'>
+			<div>
 				<img
 					src={pokemon.sprites.other.dream_world.front_default}
-					//el link de arriba se saca de la api y hay mas donde revisar - se puede sacar de SPRITES
+					//Above image taken from SPRITES in api
 					alt={`Pokemon ${pokemon.name}`}
 				/>
 			</div>
 
-			<div className='card-info'>
+			<div>
 
-				<span className='pokemon-id'>N° {pokemon.id}</span>
+				<span>N° {pokemon.id}</span>
 				<h3>{pokemon.name}</h3>
-				<div className='card-types'>
+
+				<div>
 					{pokemon.types.map(type => (
 						<span key={type.type.name} className={type.type.name}>
 							{type.type.name}
-							{/* para sacar los elementos del contenido de cada card revisar este punto */}
+							{/* check this point to add more pokemon content to each card */}
 						</span>
 					))}
 				</div>
+
+					<div className='card-abilities'>
+						<h4>Abilities:</h4>
+						<ul>
+							{pokemon.abilities.map(ability => (
+							<li key={ability.ability.name}>{ability.ability.name}</li>
+							))}
+						</ul>
+					</div>
+
 			</div>
 		</Link>
 		</>

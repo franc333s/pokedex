@@ -1,8 +1,12 @@
+import CardPokemon from '../components/cardPokemon/CardPokemon'
+
 function Pokedex() {
 
     return (
 		<>
-            <div className="">This is the pokemon detail</div>
+            <div>
+                This is the pokemon 
+            </div>
         </>
     )
 }

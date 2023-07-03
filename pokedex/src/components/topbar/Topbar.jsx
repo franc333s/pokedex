@@ -8,7 +8,7 @@ function Topbar() {
 		<>
            <header className='topbar'>
 				<Link to='/'>
-					<img src='/public/pokedex-logo.png' alt='Logo Pokedex'/>
+					<img src='/pokedex-logo.png' alt='Logo Pokedex'/>
 				</Link>
 
 				
