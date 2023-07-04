@@ -42,20 +42,15 @@ SCSS Variables: Sass variables have been used to facilitate code updates and wer
 
 4. DEVELOPMENT DOCUMENTATION
 
+- To start the Pokédex project, I have used this tutorial: https://www.youtube.com/watch?v=BVQrG-Bp-94. From it, I have extracted the creation of the `ThemeContext` provider and `ThemeProvider`, the initial structure of the home page, and the way to render the content of the inner Pokémon page. The CSS is not based on the model in the video; it has been created exclusively for this application.
 - useContext: https://www.youtube.com/watch?v=Ae33_gdJgnQ
 - Promise: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
 - Async functions: https://developer.mozilla.org/es/docs/Learn/JavaScript/Asynchronous/Introducing
 & https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction 
 - Loader for async https://www.npmjs.com/package/react-loader-spinner
-
 - Pagination: https://www.freecodecamp.org/news/build-a-custom-pagination-component-in-react/, https://www.simplilearn.com/tutorials/reactjs-tutorial/pagination-in-reactjs#:~:text=Pagination%20in%20React%20JS%20is,make%20group%20requests%20for%20data.
-
 - Dark/light themes: https://www.youtube.com/watch?v=VzF2iTTc0MA
-
-- List view/Grid view: 
-
 - useNavigate: https://reactrouter.com/en/main/hooks/use-navigate & https://www.geeksforgeeks.org/reactjs-usenavigate-hook/
-
 - Clamp calculation: https://www.fluid-type-scale.com
 
 5. DEVELOPMENT PROCESS
@@ -63,8 +58,36 @@ SCSS Variables: Sass variables have been used to facilitate code updates and wer
 Phase 1:
 In the first phase of development, the React project with Vite has been launched, and folders have been organized to include only the files that are going to be used.
 
-Routes have been included, the initial organization of the App.jsx file has been done, the view of Pokedex.jsx has been prepared to render the content, and the minimum viable components for this to happen (CardPoke  mon.jsx, PokemonList.jsx, Topbar.jsx) have been created. The context has been created (with the PokemonContext.jsx and PokemonProvider.jsx components) to connect the API to this app.
+Routes have been included, the initial organization of the App.jsx file has been done, the view of Pokedex.jsx has been prepared to render the content, and the minimum viable components for this to happen (CardPokemon.jsx, PokemonList.jsx, Topbar.jsx) have been created. The context has been created (with the PokemonContext.jsx and PokemonProvider.jsx components) to connect the API to this app.
 
 
 Phase 2:
+In the second phase, I focused on displaying only 12 Pokemon during the initial load and implementing pagination for the content.
+I encountered some issues during this process. In order to render only 12 Pokemon per page, the first set of 12 was rendered twice, and with the additional load, the first set of 12 was rendered again. To solve this, I modified the part where getAllPokemons(12) was called. I replaced it with getAllPokemons(12, offset), and I marked the initial function as const getAllPokemons = async (limit, offset). This adjustment helped resolve the issue.
+
+
+Phase 3: 
+In the third phase, I the dark/light mode has been implemented using the `ThemeContext` provider. This mode was applied to the entire page in `App.jsx`. Two IDs (`#dark` and `#light`) were created, which trigger the style change depending on which mode is active. To create the switch, I installed the `react-switch` package.
+The toggle switch was added to the topbar component, and the `ThemeProvider` is set up in `App.jsx`.
+
+
+Phase 4:
+For this phase, I created the list and grid views for the homepage. I based this feature on the dark/light mode to implement a combination of grid and list views. This functionality works by toggling a class on the div that contains all the Pokemon cards, which determines whether the grid or list styles are applied and changes how the cards are displayed.
+
+
+Phase 5:
+In the fifth phase, I created a "Scroll to Top" component. This component allows users to scroll back to the top of the page with a single click. It has been implemented and has worked as intended but sometimes it fails, it needs to be checked again.
+
+
+Phase 6:
+Implementation of the feature that allows returning to the initial view of the homepage (from Pokémon number 1) by clicking on the Pokedex logo. This feature has been implemented in the topbar.
+
+
+Phase 7:
+Creation of the Pokémon detail page and the Loader component to make async functions work. Some scss styles have been added to the homepage and the topbar.
+
+Phase 8:
+Change of the Loader component. It has been replaced with React Spinners and the local component has been removed.
+
+
 
