@@ -1,7 +1,9 @@
 import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Loader from '../loader/Loader';
 import { PokemonContext } from '../../context/PokemonContext';
+import { MutatingDots } from  'react-loader-spinner';
+
+import "./PokemonSpecs.scss";
 
 const PokemonSpecs = () => {
 	const { getPokemonByID } = useContext(PokemonContext);
@@ -22,89 +24,114 @@ const PokemonSpecs = () => {
 	}, []);
 
 	return (
-		<main className='container main-pokemon'>
+		<main className='pokemon vertical-padding'>
 			{loading ? (
-				<Loader />
+				<MutatingDots 
+                    height="100"
+                    width="100"
+                    color="#4fa94d"
+                    secondaryColor= '#4fa94d'
+                    radius='12.5'
+                    ariaLabel="mutating-dots-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                />
 			) : (
 				<>
-					<div className='header-main-pokemon'>
-						<span className='number-pokemon'>#{pokemon.id}</span>
-						<div className='container-img-pokemon'>
-							<img
+                    <section className='pokemon__id'>
+                        <h1 className='pokemon__id__name'>{(pokemon.name)}</h1>
+                        <div className='pokemon__id__id p--main'>#{pokemon.id}</div>
+					</section>
+                    
+					<section className='pokemon__info'>
+						
+						<div className='pokemon__info__img-type'>
+							<img className='pokemon__info__img'
 								src={pokemon.sprites.other.dream_world.front_default}
 								alt={`Pokemon ${pokemon?.name}`}
 							/>
-						</div>
-
-						<div className='container-info-pokemon'>
-							<h1>{(pokemon.name)}</h1>
-							<div className='card-types info-pokemon-type'>
+                            <div className='pokemon__info__type'>
 								{pokemon.types.map(type => (
 									<span key={type.type.name} className={`${type.type.name}`}>
 										{type.type.name}
 									</span>
 								))}
 							</div>
-							<div className='info-pokemon'>
-								<div className='group-info'>
-									<p>Altura</p>
-									<span>{pokemon.height}</span>
-								</div>
-								<div className='group-info'>
-									<p>Peso</p>
-									<span>{pokemon.weight}KG</span>
-								</div>
-							</div>
 						</div>
-					</div>
 
-					<div className='container-stats'>
-						<h1>Estadísticas</h1>
-						<div className='stats'>
-							<div className='stat-group'>
-								<span>Hp</span>
-								<div className='progress-bar'></div>
-								<span className='counter-stat'>
-									{pokemon.stats[0].base_stat}
-								</span>
-							</div>
-							<div className='stat-group'>
-								<span>Attack</span>
-								<div className='progress-bar'></div>
-								<span className='counter-stat'>
-									{pokemon.stats[1].base_stat}
-								</span>
-							</div>
-							<div className='stat-group'>
-								<span>Defense</span>
-								<div className='progress-bar'></div>
-								<span className='counter-stat'>
-									{pokemon.stats[2].base_stat}
-								</span>
-							</div>
-							<div className='stat-group'>
-								<span>Special Attack</span>
-								<div className='progress-bar'></div>
-								<span className='counter-stat'>
-									{pokemon.stats[3].base_stat}
-								</span>
-							</div>
-							<div className='stat-group'>
-								<span>Special Defense</span>
-								<div className='progress-bar'></div>
-								<span className='counter-stat'>
-									{pokemon.stats[4].base_stat}
-								</span>
-							</div>
-							<div className='stat-group'>
-								<span>Speed</span>
-								<div className='progress-bar'></div>
-								<span className='counter-stat'>
-									{pokemon.stats[5].base_stat}
-								</span>
-							</div>
+						<div className='pokemon__info__details'>
+
+                                <h2>Details</h2>
+
+                                <div className='pokemon__info__details__item'>
+									<p>Base experience</p>
+									<p>{pokemon.base_experience}</p>
+								</div>
+
+								<div className='pokemon__info__details__item'>
+									<p>Height</p>
+									<p>{pokemon.height * 10} cm</p>
+								</div>
+
+								<div className='pokemon__info__details__item'>
+									<p>Weight</p>
+									<p>{pokemon.weight / 10} Kg</p>
+								</div>
+
 						</div>
-					</div>
+                    
+                            
+                        <div className='pokemon__info__stats'>
+                            <h2>Statistics</h2>
+                            <div className='stats'>
+                                <div className='stat-group'>
+                                    <p>Hp</p>
+                                    <div className='progress-bar'></div>
+                                    <p className='counter-stat'>
+                                        {pokemon.stats[0].base_stat}
+                                    </p>
+                                </div>
+                                <div className='stat-group'>
+                                    <p>Attack</p>
+                                    <div className='progress-bar'></div>
+                                    <p className='counter-stat'>
+                                        {pokemon.stats[1].base_stat}
+                                    </p>
+                                </div>
+                                <div className='stat-group'>
+                                    <p>Defense</p>
+                                    <div className='progress-bar'></div>
+                                    <p className='counter-stat'>
+                                        {pokemon.stats[2].base_stat}
+                                    </p>
+                                </div>
+                                <div className='stat-group'>
+                                    <p>Special Attack</p>
+                                    <div className='progress-bar'></div>
+                                    <p className='counter-stat'>
+                                        {pokemon.stats[3].base_stat}
+                                    </p>
+                                </div>
+                                <div className='stat-group'>
+                                    <p>Special Defense</p>
+                                    <div className='progress-bar'></div>
+                                    <p className='counter-stat'>
+                                        {pokemon.stats[4].base_stat}
+                                    </p>
+                                </div>
+                                <div className='stat-group'>
+                                    <p>Speed</p>
+                                    <div className='progress-bar'></div>
+                                    <p className='counter-stat'>
+                                        {pokemon.stats[5].base_stat}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+					</section>
+
 				</>
 			)}
 		</main>

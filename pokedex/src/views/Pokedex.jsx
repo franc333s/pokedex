@@ -14,20 +14,21 @@ function Pokedex() {
 
     return (
 		<>
-        <main className="vertical-padding">
-            <div className="view-mode-toggle">
-                <button onClick={toggleViewMode}>
-                    {viewMode === "grid" ? "See List View" : "See Grid View"}
-                </button>
-                
-            </div>  
+            <main className="vertical-padding">
 
+                <div className="pokedex__grid-list-btn">
 
-            <PokemonList viewMode={viewMode} />
+                    <button className="btn" onClick={toggleViewMode}>
+                        {viewMode === "grid" ? "List View" : "Grid View"}
+                    </button>
 
+                </div>
 
-            <PageNav />
-        </main>
+                <PokemonList viewMode={viewMode} />
+
+                <PageNav />
+
+            </main>
         </>
     )
 }

@@ -1,26 +1,64 @@
 
-// Colors
-$color-white: hsl(306 0% 100%); // #FFFFFF
-$color-off-white: hsl(36 26% 96%); // #F8F6F3
-$color-red: hsl(3, 85%, 52%); // #EC483F
-$color-blue: hsl(240 96% 58%); // #312DFB
-$color-green: hsl(81 100% 69%); // #C9FF63
-$color-gray: hsl(36 16% 93%); // #F0EEEA
-$color-black: hsl(0 0% 6%); // #101010
-
+// General colors
+$color-white: #FBFBFA;
+$color-off-white: #F2F2EB;
+$color-red: #ED271D;
+$color-blueviolet: #6F04F7;
+$color-violet: #BF84D5;
+$color-purple: #743F85;
+$color-purple-dark: #3D0352;
+$color-black: #101010;
 
 // Color implementation
 $color-bg-white: $color-white;
 $color-bg-off-white: $color-off-white;
 $color-bg-red: $color-red;
-$color-bg-blue: $color-blue;
-$color-bg-green: $color-green;
-$color-bg-gray: $color-gray;
+$color-bg-blueviolet: $color-blueviolet;
+$color-bg-purple: $color-purple;
+$color-bg-purple-dark: $color-purple-dark;
 $color-bg-black: $color-black;
 
+// Pokemon type implementation
+$color-pokemon-normal: #ffffff;
+$color-pokemon-fire: #F5463D;
+$color-pokemon-water: #669EF2;
+$color-pokemon-grass: #86D05B;
+$color-pokemon-electric: #FED854;
+$color-pokemon-ice: #D9E8FF;
+$color-pokemon-fighting: #BB0C03;
+$color-pokemon-poison: #FF5E00;
+$color-pokemon-ground: #F8E6BA;
+$color-pokemon-flying: #E3FEDA;
+$color-pokemon-psychic: #DB42F4;
+$color-pokemon-bug: #BFC153;
+$color-pokemon-rock: #983414;
+$color-pokemon-ghost: #F5F3EE;
+$color-pokemon-dark: #35253B;
+$color-pokemon-dragon: #19B959;
+$color-pokemon-steel: #928D94;
+$color-pokemon-fairy: #FED3D3;
 
-$color-bg-red-darker: darken($color-bg-red, 16%);
-$color-bg-gray-darker: darken($color-bg-gray, 4%);
+
+
+
+// Font family
+$font-primary: "VT323" , monospace;
+
+// Font family implementation
+
+    //Buttons
+$button-font-family: $font-primary;
+
+
+//Size implementations
+    // Paragraphs and main text
+$font-size-h1: clamp(6rem, 3.92vw + 4.47rem, 12rem);;
+$font-size-h2: clamp(2.4rem, 1.83vw + 1.69rem, 5.2rem);
+$font-size-p: 2rem;
+$font-size-p-big: 4rem;
+
+$button-font-size: 2rem;
+
 
 
 // Mediaqueries
@@ -39,6 +77,3 @@ $bp-xlarge: 120rem; // 1920px
 $vertical-padding-base: clamp(2rem, 5.23vw + -0.04rem, 10rem);
 
 
-// Fonts
-
-$font-primary: "VT323" , monospace;

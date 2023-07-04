@@ -45,12 +45,12 @@ function PageNav() {
     };
 
     return (
-        <div>
+        <div className="pokedex__pagination">
             {offset > 0 && (
-                <button onClick={handlePreviousPage}>Previous Page</button>
+                <button onClick={handlePreviousPage}>Prev Page</button>
             )}
 
-            <button onClick={handleNextPage}>Next Page</button>
+            <button className="btn" onClick={handleNextPage}>Next Page</button>
             
         </div>
     );

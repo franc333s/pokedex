@@ -1,0 +1,46 @@
+@import './sass-variables';
+@import './mixins';
+
+
+button,
+.btn {
+    color: $color-blueviolet;
+    background-color: transparent;
+    border: $color-bg-blueviolet 2px solid;
+    border-radius: 4rem;
+    padding: .8rem 1.6rem;
+    font-family: $button-font-family;
+    font-size: $button-font-size;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+
+
+    &:visited {
+        color: inherit;
+    }
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-bg-blueviolet;
+        box-shadow: 0 0 .4rem $color-bg-black;
+    }
+}
+
+#dark {
+
+    & button,
+    & .btn {
+        color: $color-white;
+        border: $color-bg-white 2px solid;
+
+        &:hover,
+        &:hover {
+            color: $color-blueviolet;
+            background-color: $color-bg-white;
+            box-shadow: 0 0 .4rem $color-bg-off-white;
+        }
+    }
+
+
+}

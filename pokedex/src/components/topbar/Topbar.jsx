@@ -17,12 +17,21 @@ function Topbar() {
         <>
            <header className='topbar vertical-padding'>
                 <Link to='/' onClick={() => navigate.push('/')}>
-                    <img src='/pokedex-logo.png' alt='Logo Pokedex'/>
+                    <img className='topbar__logo' src='/pokedex-logo.png' alt='Logo Pokedex'/>
                 </Link>
 
-                <div>
-                    <label> {theme === "light" ? "Day Mode" : "Night Mode"} </label>
-                    <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
+                <div className='topbar__switch'>
+                    <label className='tobpar__switch__label'> {theme === "light" ? "Day Mode" : "Night Mode"} </label>
+                    <ReactSwitch 
+                        onColor="#6F04F7"
+                        offColor="#F5E559"
+                        handleDiameter={20}
+                        uncheckedIcon={false}
+                        checkedIcon={false}
+                        height={24}
+                        onChange={toggleTheme} 
+                        checked={theme === "dark"}
+                    />
                 </div>
 
             </header>

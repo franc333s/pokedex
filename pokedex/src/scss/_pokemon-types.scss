@@ -1,0 +1,116 @@
+@import './sass-variables';
+@import './mixins';
+
+.normal,
+.fire,
+.water,
+.grass,
+.electric,
+.ice,
+.fighting,
+.poison,
+.ground,
+.flying,
+.psychic,
+.bug,
+.rock,
+.ghost,
+.dark,
+.dragon,
+.steel,
+.fairy {
+    padding: .2rem .6rem;
+    border-radius: .6rem;
+    text-transform: uppercase;
+    margin-right: .6rem;
+}
+
+.normal {
+    color: $color-black;
+    background-color: $color-pokemon-normal;
+}
+
+.fire {
+    color: $color-white;
+    background-color: $color-pokemon-fire;
+}
+
+.water {
+    color: $color-white;
+    background-color: $color-pokemon-water;
+}
+
+.grass {
+    color: $color-white;
+    background-color: $color-pokemon-grass;
+}
+
+.electric {
+    color: $color-black;
+    background-color: $color-pokemon-electric;
+}
+
+.ice {
+    color: $color-black;
+    background-color: $color-pokemon-ice;
+}
+
+.fighting {
+    color: $color-white;
+    background-color: $color-pokemon-fighting;
+}
+
+.poison {
+    color: $color-white;
+    background-color: $color-pokemon-poison;
+}
+
+.ground {
+    color: $color-black;
+    background-color: $color-pokemon-ground;
+}
+
+.flying {
+    color: $color-black;
+    background-color: $color-pokemon-flying;
+}
+
+.psychic {
+    color: $color-white;
+    background-color: $color-pokemon-psychic;
+}
+
+.bug {
+    color: $color-white;
+    background-color: $color-pokemon-bug;
+}
+
+.rock {
+    color: $color-white;
+    background-color: $color-pokemon-rock;
+}
+
+.ghost {
+    color: $color-black;
+    background-color: $color-pokemon-ghost;
+}
+
+.dark {
+    color: $color-white;
+    background-color: $color-pokemon-dark;
+}
+
+.dragon {
+    color: $color-white;
+    background-color: $color-pokemon-dragon;
+}
+
+.steel {
+    color: $color-white;
+    background-color: $color-pokemon-steel;
+}
+
+.fairy {
+    color: $color-black;
+    background-color: $color-pokemon-fairy;
+}
