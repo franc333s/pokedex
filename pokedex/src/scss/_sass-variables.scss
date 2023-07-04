@@ -2,7 +2,7 @@
 // Colors
 $color-white: hsl(306 0% 100%); // #FFFFFF
 $color-off-white: hsl(36 26% 96%); // #F8F6F3
-$color-red: hsl(3 82% 59%); // #EC483F
+$color-red: hsl(3, 85%, 52%); // #EC483F
 $color-blue: hsl(240 96% 58%); // #312DFB
 $color-green: hsl(81 100% 69%); // #C9FF63
 $color-gray: hsl(36 16% 93%); // #F0EEEA
@@ -17,3 +17,28 @@ $color-bg-blue: $color-blue;
 $color-bg-green: $color-green;
 $color-bg-gray: $color-gray;
 $color-bg-black: $color-black;
+
+
+$color-bg-red-darker: darken($color-bg-red, 16%);
+$color-bg-gray-darker: darken($color-bg-gray, 4%);
+
+
+// Mediaqueries
+$bp-small: 24rem; // 384px 
+$bp-lowermedium: 37rem; // 592px
+$bp-medium: 48rem; // 768px
+$bp-uppermedium: 60rem; // 960px
+$bp-lowerlarge: 75rem; // 1216px
+$bp-large: 90rem; // 1440px
+$bp-xlarge: 120rem; // 1920px
+
+
+
+// Padding implementation
+    //Vertical main padding
+$vertical-padding-base: clamp(2rem, 5.23vw + -0.04rem, 10rem);
+
+
+// Fonts
+
+$font-primary: "VT323" , monospace;

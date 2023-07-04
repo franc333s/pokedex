@@ -1,0 +1,21 @@
+@import './mixins';
+@import './sass-variables';
+
+h1,
+h2,
+h3,
+p,
+a,
+ul,
+li,
+Link,
+div, 
+section {
+    margin: 0;
+    padding: 0;
+}
+
+.vertical-padding {
+    padding-left: $vertical-padding-base;
+    padding-right: $vertical-padding-base;
+}

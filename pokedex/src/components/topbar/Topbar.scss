@@ -1,8 +1,17 @@
+@import '../../scss/sass-variables';
+@import '../../scss/mixins'; 
+
 
 .topbar {
-    background-color: gold;
+    background-color: $color-bg-red;
+
+    & img {
+        width: 20em;
+        margin-top: 2rem;
+    }
 }
 
 #dark .topbar {
-    background-color: red;
+    background-color: $color-bg-red-darker;
 }
+

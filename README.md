@@ -45,7 +45,8 @@ SCSS Variables: Sass variables have been used to facilitate code updates and wer
 - useContext: https://www.youtube.com/watch?v=Ae33_gdJgnQ
 - Promise: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
 - Async functions: https://developer.mozilla.org/es/docs/Learn/JavaScript/Asynchronous/Introducing
-& https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction
+& https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction 
+- Loader for async https://www.npmjs.com/package/react-loader-spinner
 
 - Pagination: https://www.freecodecamp.org/news/build-a-custom-pagination-component-in-react/, https://www.simplilearn.com/tutorials/reactjs-tutorial/pagination-in-reactjs#:~:text=Pagination%20in%20React%20JS%20is,make%20group%20requests%20for%20data.
 
@@ -54,6 +55,8 @@ SCSS Variables: Sass variables have been used to facilitate code updates and wer
 - List view/Grid view: 
 
 - useNavigate: https://reactrouter.com/en/main/hooks/use-navigate & https://www.geeksforgeeks.org/reactjs-usenavigate-hook/
+
+- Clamp calculation: https://www.fluid-type-scale.com
 
 5. DEVELOPMENT PROCESS
 

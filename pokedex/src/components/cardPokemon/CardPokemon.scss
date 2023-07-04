@@ -1,0 +1,59 @@
+@import '../../scss/mixins';
+@import '../../scss/sass-variables';
+
+
+.card {
+    color: $color-black;
+    font-size: 2rem;
+    text-decoration: none;
+
+    background: $color-bg-gray-darker;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-bottom: clamp(1.2rem, 1.83vw + 0.49rem, 4rem);
+
+    &__img {
+        height: 14rem;
+        width: 14rem;
+        margin-right: clamp(3.2rem, 1.05vw + 2.79rem, 4.8rem);
+
+        @include mq($bp-lowermedium) {
+            margin-left: clamp(1.2rem, 1.83vw + 0.49rem, 4rem);
+        }
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        &__name {
+            font-size: clamp(2.4rem, 1.83vw + 1.69rem, 5.2rem);
+            line-height: 85%;
+            text-transform: capitalize;
+            padding-bottom: .4rem;
+        }
+    }
+}
+
+
+
+.grid .card {
+    margin-bottom: 0;
+
+    &__img {
+        height: clamp(10rem, 9.15vw + 6.43rem, 24rem);
+        width: clamp(10rem, 9.15vw + 6.43rem, 24rem);
+    }
+    
+
+    &__desc {
+    
+        @include mq($bp-lowermedium) {
+            
+        }
+
+   
+    }
+}
+

@@ -1,14 +1,13 @@
-import CardPokemon from '../components/cardPokemon/CardPokemon'
+import PokemonSpecs from "../components/pokemonSpecs/PokemonSpecs";
 
-function Pokedex() {
+function PokemonDetail() {
 
     return (
 		<>
-            <div>
-                This is the pokemon 
-            </div>
+           <PokemonSpecs />
         </>
+    
     )
 }
 
-export default Pokedex;
+export default PokemonDetail;

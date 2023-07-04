@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './CardPokemon.scss'
 
 
 const CardPokemon = ({pokemon}) => {
@@ -6,21 +7,23 @@ const CardPokemon = ({pokemon}) => {
 
 	return (
 		<>
-		<Link to={`/pokemon/${pokemon.id}`} className=''>
+		<Link to={`/pokemon/${pokemon.id}`} className="card">
 			
 			<div>
-				<img
+				<img className="card__img"
 					src={pokemon.sprites.other.dream_world.front_default}
 					//Above image taken from SPRITES in api
 					alt={`Pokemon ${pokemon.name}`}
 				/>
 			</div>
 
-			<div>
+			<div className="card__desc">
 
-				<span>N° {pokemon.id}</span>
-				<h3>{pokemon.name}</h3>
-
+				<div>
+					<h2 className="card__desc__name">{pokemon.name}</h2>
+					<div className="card__desc__id">#{pokemon.id}</div>
+				</div>
+				
 				<div>
 					{pokemon.types.map(type => (
 						<span key={type.type.name} className={type.type.name}>
@@ -29,15 +32,6 @@ const CardPokemon = ({pokemon}) => {
 						</span>
 					))}
 				</div>
-
-					<div className='card-abilities'>
-						<h4>Abilities:</h4>
-						<ul>
-							{pokemon.abilities.map(ability => (
-							<li key={ability.ability.name}>{ability.ability.name}</li>
-							))}
-						</ul>
-					</div>
 
 			</div>
 		</Link>

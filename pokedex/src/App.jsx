@@ -1,7 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { createContext, useState } from "react";
 import { PokemonProvider } from "./context/PokemonProvider";
-import ScrollToTop from "./components/scrollToTop/scrollToTop";
 
 import Topbar from "./components/topbar/Topbar"
 import Pokedex from "./views/Pokedex"
@@ -33,7 +32,7 @@ function App() {
                     <Topbar />
                 </header>
                 
-                <ScrollToTop />
+
                 <Routes>
 
                     <Route path="/" element={<Pokedex/>} />

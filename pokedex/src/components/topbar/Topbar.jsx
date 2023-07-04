@@ -1,4 +1,3 @@
-
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ReactSwitch from "react-switch";
@@ -12,12 +11,11 @@ import "./Topbar.scss";
 function Topbar() {
 
     const { theme, toggleTheme } = useContext(ThemeContext);
-
     const navigate = useNavigate();
 
     return (
         <>
-           <header className='topbar'>
+           <header className='topbar vertical-padding'>
                 <Link to='/' onClick={() => navigate.push('/')}>
                     <img src='/pokedex-logo.png' alt='Logo Pokedex'/>
                 </Link>
