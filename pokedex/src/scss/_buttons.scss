@@ -14,10 +14,10 @@ button,
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s all ease-in-out;
-
+    text-decoration: none;
 
     &:visited {
-        color: inherit;
+        color: $color-blueviolet;
     }
 
     &:hover {

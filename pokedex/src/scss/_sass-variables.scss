@@ -1,3 +1,5 @@
+// Sass variables
+
 
 // General colors
 $color-white: #FBFBFA;
@@ -8,6 +10,17 @@ $color-violet: #BF84D5;
 $color-purple: #743F85;
 $color-purple-dark: #3D0352;
 $color-black: #101010;
+
+// Transparencies
+$color-gray-trans: hsla(0, 0%, 9%, 0.074);
+
+// Stats colors
+$color-hp: #A1C4F9;
+$color-attack: #FBA61E;
+$color-defense: #8DE658;
+$color-sp-attack: #FF463C;
+$color-sp-defense: #1C88AA;
+$color-speed: #FEEB3A;
 
 // Color implementation
 $color-bg-white: $color-white;
@@ -39,8 +52,6 @@ $color-pokemon-steel: #928D94;
 $color-pokemon-fairy: #FED3D3;
 
 
-
-
 // Font family
 $font-primary: "VT323" , monospace;
 
@@ -54,22 +65,18 @@ $button-font-family: $font-primary;
     // Paragraphs and main text
 $font-size-h1: clamp(6rem, 3.92vw + 4.47rem, 12rem);;
 $font-size-h2: clamp(2.4rem, 1.83vw + 1.69rem, 5.2rem);
-$font-size-p: 2rem;
+$font-size-p-small: 2rem;
+$font-size-p: 3.2rem;
 $font-size-p-big: 4rem;
-
 $button-font-size: 2rem;
 
 
-
 // Mediaqueries
-$bp-small: 24rem; // 384px 
 $bp-lowermedium: 37rem; // 592px
 $bp-medium: 48rem; // 768px
 $bp-uppermedium: 60rem; // 960px
 $bp-lowerlarge: 75rem; // 1216px
 $bp-large: 90rem; // 1440px
-$bp-xlarge: 120rem; // 1920px
-
 
 
 // Padding implementation
@@ -77,3 +84,27 @@ $bp-xlarge: 120rem; // 1920px
 $vertical-padding-base: clamp(2rem, 5.23vw + -0.04rem, 10rem);
 
 
+// Variables for @each / @for / etc
+
+// Maps for general colors
+$map-colors: (
+    "white": $color-white,
+    "off-white": $color-off-white,
+    "red": $color-red,
+    "blueviolet": $color-blueviolet,
+    "violet": $color-violet,
+    "purple": $color-purple,
+    "purple-dark": $color-purple-dark,
+    "black": $color-black
+);
+
+// Maps for stats colors
+$map-colors-stats: (
+    "hp": $color-hp,
+    "attack": $color-attack,
+    "defense": $color-defense,
+    "sp-attack": $color-sp-attack,
+    "sp-defense": $color-sp-defense,
+    "speed": $color-speed
+);
+// Functions that runs this map in utilities.scss

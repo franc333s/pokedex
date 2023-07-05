@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-import { PokemonContext } from "./PokemonContext"
+import { useEffect, useState } from 'react'
+import { PokemonContext } from './PokemonContext'
 
 export const PokemonProvider = ({children}) => {
 

@@ -1,10 +1,10 @@
-import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import ReactSwitch from "react-switch";
-import { ThemeContext } from "../../App";
+import { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import ReactSwitch from 'react-switch';
+import { ThemeContext } from '../../App';
 
 
-import "./Topbar.scss";
+import './Topbar.scss';
 
 
 
@@ -33,7 +33,6 @@ function Topbar() {
                         checked={theme === "dark"}
                     />
                 </div>
-
             </header>
         </>
     )

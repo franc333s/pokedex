@@ -24,31 +24,21 @@ function App() {
     <>
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
             <main className="App" id={theme}>
-
-
                 <PokemonProvider>
-
                 <header>
                     <Topbar />
                 </header>
-                
-
                 <Routes>
-
                     <Route path="/" element={<Pokedex/>} />
                     <Route path="/pokemon/:id" element={<PokemonDetail/>} />
                     <Route path="/favorite" element={<Favorites/>} />
-
                     <Route path="*" element={<Navigate to='/' />} />
-
                 </Routes>
-                
                 </PokemonProvider>
             </main>
-
         </ThemeContext.Provider>
     </>
-  )
+    )
 }
 
 export default App

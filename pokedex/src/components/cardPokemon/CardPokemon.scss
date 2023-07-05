@@ -1,12 +1,11 @@
-@import '../../scss/mixins';
 @import '../../scss/sass-variables';
+@import '../../scss/mixins';
 
 
 .card {
     color: $color-black;
-    font-size: $font-size-p;
+    font-size: $font-size-p-small;
     text-decoration: none;
-
     background: $color-bg-off-white;
     border-radius: 2rem;
     padding: 2rem;
@@ -34,8 +33,6 @@
     }
 }
 
-
-
 .grid .card {
     margin-bottom: 0;
 
@@ -44,7 +41,6 @@
         width: clamp(10rem, 9.15vw + 6.43rem, 24rem);
     }
 }
-
 
 #dark {
 

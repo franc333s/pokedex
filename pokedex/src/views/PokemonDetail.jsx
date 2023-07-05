@@ -1,12 +1,12 @@
 import PokemonSpecs from "../components/pokemonSpecs/PokemonSpecs";
 
+
 function PokemonDetail() {
 
     return (
-		<>
-           <PokemonSpecs />
+        <>
+            <PokemonSpecs />
         </>
-    
     )
 }
 

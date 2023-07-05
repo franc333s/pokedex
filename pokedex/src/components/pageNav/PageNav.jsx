@@ -1,13 +1,13 @@
-import { useContext } from 'react';
 import { PokemonContext } from '../../context/PokemonContext';
+import { useContext } from 'react';
+
 
 function PageNav() {
 
     const { setAllPokemons, offset, setOffset } = useContext(PokemonContext);
 
-
     const handleNextPage = async () => {
-        //Function to go to next page
+        // Funct to go to next page
         const newOffset = offset + 12;
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=12&offset=${newOffset}`);
         const data = await res.json();
@@ -25,7 +25,7 @@ function PageNav() {
     };
 
     const handlePreviousPage = async () => {
-        //Function to go back to the previous page
+        // Funct to go back to the previous page
         const newOffset = offset -12;
 
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=12&offset=${newOffset}`);
