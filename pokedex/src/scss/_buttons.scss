@@ -13,7 +13,7 @@ button,
     font-size: $button-font-size;
     text-transform: uppercase;
     cursor: pointer;
-    transition: 0.3s all ease-in-out;
+    transition: $hover-transition;
     text-decoration: none;
 
     &:visited {

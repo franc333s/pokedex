@@ -13,7 +13,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            gap: 4rem;
+            gap: $flex-gap-base;
         }
 
         &__name {
@@ -21,7 +21,7 @@
         }
 
         &__id {
-            font-size: 4rem;
+            font-size: $font-size-p-big;
         }
     }
 
@@ -40,7 +40,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 4rem;
+            gap: $flex-gap-base;
 
             @include mq($bp-lowermedium) {
                 align-items: center;
@@ -58,7 +58,7 @@
             &__item {
                 display: flex;
                 flex-direction: column;
-                gap: .4rem;
+                gap: $flex-gap-v-small;
                 padding-bottom: 2rem;
             }
         }
@@ -87,7 +87,7 @@
             &__item {
                 display: flex;
                 flex-direction: column;
-                gap: .4rem;
+                gap: $flex-gap-v-small;
                 padding-bottom: 2rem;
             }
         }

@@ -1,25 +1,29 @@
-import { useState } from "react";
-import PageNav from "../components/pageNav/PageNav";
-import { PokemonList } from "../components/pokemonList/pokemonList";
+import { useState } from 'react';
+import PageNav from '../components/pageNav/PageNav';
+import { PokemonList } from '../components/pokemonList/pokemonList';
+
 
 
 function Pokedex() {
 
-    const [viewMode, setViewMode] = useState("list");
+    const [viewMode, setViewMode] = useState('list');
 
+    // List vs grid feature
     const toggleViewMode = () => {
-        setViewMode((prevMode) => (prevMode === "list" ? "grid" : "list"));
+        setViewMode((prevMode) => (prevMode === 'list' ? 'grid' : 'list'));
     };
+
 
     return (
 		<>
-            <main className="vertical-padding">
-                <div className="pokedex__grid-list-btn">
-                    <button className="btn" onClick={toggleViewMode}>
-                        {viewMode === "grid" ? "List View" : "Grid View"}
+            <main className='vertical-padding'>
+                <div className='pokedex__grid-list-btn'>
+                    <button className='btn' onClick={toggleViewMode}>
+                        {viewMode === 'grid' ? 'List View' : 'Grid View'}
                     </button>
                 </div>
-                <PokemonList viewMode={viewMode} />
+                <PokemonList 
+                    viewMode={viewMode} />
                 <PageNav />
             </main>
         </>

@@ -13,6 +13,8 @@ $color-black: #101010;
 
 // Transparencies
 $color-gray-trans: hsla(0, 0%, 9%, 0.074);
+$color-purple-dark-trans: hsla(286, 76%, 16%, 0.374);
+$color-off-white-trans: hsla(283, 67%, 93%, 0.887);
 
 // Stats colors
 $color-hp: #A1C4F9;
@@ -71,32 +73,24 @@ $font-size-p-big: 4rem;
 $button-font-size: 2rem;
 
 
+// Padding implementation
+    //Vertical main padding
+$vertical-padding-base: clamp(2rem, 5.23vw + -0.04rem, 10rem);
+
+$flex-gap-base: 4rem;
+$flex-gap-small: 2rem;
+$flex-gap-v-small: .4rem;
+
+
 // Mediaqueries
 $bp-lowermedium: 37rem; // 592px
 $bp-medium: 48rem; // 768px
 $bp-uppermedium: 60rem; // 960px
 $bp-lowerlarge: 75rem; // 1216px
 $bp-large: 90rem; // 1440px
-
-
-// Padding implementation
-    //Vertical main padding
-$vertical-padding-base: clamp(2rem, 5.23vw + -0.04rem, 10rem);
-
+$bp-xlarge: 120rem; // 19200px
 
 // Variables for @each / @for / etc
-
-// Maps for general colors
-$map-colors: (
-    "white": $color-white,
-    "off-white": $color-off-white,
-    "red": $color-red,
-    "blueviolet": $color-blueviolet,
-    "violet": $color-violet,
-    "purple": $color-purple,
-    "purple-dark": $color-purple-dark,
-    "black": $color-black
-);
 
 // Maps for stats colors
 $map-colors-stats: (
@@ -108,3 +102,9 @@ $map-colors-stats: (
     "speed": $color-speed
 );
 // Functions that runs this map in utilities.scss
+
+
+
+// Effects
+
+$hover-transition: 0.3s all ease-in-out;

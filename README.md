@@ -11,17 +11,21 @@ List of content
 
 1. PROJECT DEFINITION
 
+Developing a Pokédex in React with the Pokémon API: https://pokeapi.co/api/v2/pokemon.
+
+
+
 2. MINIMUM REQUIREMENTS
 
 Views: 
-- List view of Pokemons. This list must be presented in two different formats: list and card. The user must be free to switch between each one.
-- Detail view of a selected Pokemon.
+- List view of Pokémons. This list will be presented in two different formats: list and grid. The user will be free to switch between each one.
+- Detailed view of a selected Pokémon.
 
-Pokemons Presentation:
-Since there are over 1000 Pokemons, pagination is required. There will be a total of 30 Pokemons per page.
+Pokémons Presentation:
+Since there are over 1000 Pokémons, pagination has been included. There will be a total of 12 Pokémons per page.
 
 Content Structure:
-There is not a proposed structer therefore it must be designed by the developer.
+The proposed structure has been designed and adapted to the content.
 
 Themes:
 There will be two themes: one dark and one light.
@@ -30,14 +34,10 @@ There will be two themes: one dark and one light.
 
 3. EXTRA REQUIREMENTS INCLUDED
 
-Responsive navigation:
+Responsive navigation.
 
-Favorite Pokemons:
-- Mark Pokemons as favorites.
-- A view to check favorite Pokemons.
-- Keep Pokemons as favorites even when reloading the app.
+SCSS Variables: Sass variables have been used to facilitate style updates and were chosen for consistency across the entire project, as other Sass elements have also been used.
 
-SCSS Variables: Sass variables have been used to facilitate code updates and were chosen for consistency across the entire project, as other Sass elements have also been used.
 
 
 4. DEVELOPMENT DOCUMENTATION
@@ -62,21 +62,21 @@ Routes have been included, the initial organization of the App.jsx file has been
 
 
 Phase 2:
-In the second phase, I focused on displaying only 12 Pokemon during the initial load and implementing pagination for the content.
-I encountered some issues during this process. In order to render only 12 Pokemon per page, the first set of 12 was rendered twice, and with the additional load, the first set of 12 was rendered again. To solve this, I modified the part where getAllPokemons(12) was called. I replaced it with getAllPokemons(12, offset), and I marked the initial function as const getAllPokemons = async (limit, offset). This adjustment helped resolve the issue.
+In the second phase, the focus has been on displaying only 12 Pokemon during the initial load and implementing pagination for the content.
+Some issues have been encountered during this process: in order to render only 12 Pokemon per page, the first set of 12 was rendered twice, and with the additional load, the first set of 12 was rendered again. To solve this, the part where getAllPokemons(12) were called was modified. It was replaced with getAllPokemons(12, offset), and marked the initial function as const getAllPokemons = async (limit, offset). This adjustment helped resolve the issue.
 
 
 Phase 3: 
-In the third phase, I the dark/light mode has been implemented using the `ThemeContext` provider. This mode was applied to the entire page in `App.jsx`. Two IDs (`#dark` and `#light`) were created, which trigger the style change depending on which mode is active. To create the switch, I installed the `react-switch` package.
+In the third phase, the dark/light mode was implemented using the `ThemeContext` provider. This mode was applied to the entire page in `App.jsx`. Two IDs (`#dark` and `#light`) were created, which trigger the style change depending on which mode is active. To create the switch, the `react-switch` package was installed.
 The toggle switch was added to the topbar component, and the `ThemeProvider` is set up in `App.jsx`.
 
 
 Phase 4:
-For this phase, I created the list and grid views for the homepage. I based this feature on the dark/light mode to implement a combination of grid and list views. This functionality works by toggling a class on the div that contains all the Pokemon cards, which determines whether the grid or list styles are applied and changes how the cards are displayed.
+For this phase, the list / grid views were created for the homepage. This feature has been based on the dark/light mode code. This functionality works by toggling a class on the div that contains all the Pokemon cards, which determines whether the grid or list styles are applied and changes how the cards are displayed.
 
 
 Phase 5:
-In the fifth phase, I created a "Scroll to Top" component. This component allows users to scroll back to the top of the page with a single click. It has been implemented and has worked as intended but sometimes it fails, it needs to be checked again.
+In the fifth phase, "Scroll to Top" component was added to the code. This component allows to scroll back to the top of the page with a single click when users navigate throught pages. It has been implemented and has worked as intended but it has stopped working. It needs to be checked again.
 
 
 Phase 6:
@@ -88,6 +88,9 @@ Creation of the Pokémon detail page and the Loader component to make async func
 
 Phase 8:
 Change of the Loader component. It has been replaced with React Spinners and the local component has been removed.
+
+Phase 9: 
+Styles and final touches added. 
 
 
 

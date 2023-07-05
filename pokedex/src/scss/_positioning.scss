@@ -13,11 +13,9 @@
     &__pagination {
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        gap: $flex-gap-small;
         padding: 4rem 0;
     }
-
-
 }
 
 

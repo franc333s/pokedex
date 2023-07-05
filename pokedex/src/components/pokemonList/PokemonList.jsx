@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import { PokemonContext } from "../../context/PokemonContext";
-import CardPokemon from "../cardPokemon/CardPokemon";
+import { useContext } from 'react';
+import { PokemonContext } from '../../context/PokemonContext';
+import CardPokemon from '../cardPokemon/CardPokemon';
 
-import "./PokemonList.scss";
+import './PokemonList.scss';
 
 export const PokemonList = ({ viewMode }) => {
 
@@ -11,7 +11,7 @@ export const PokemonList = ({ viewMode }) => {
     return (
         <div className={`pokemon-list ${viewMode}`}>
             {allPokemons.map((pokemon, index) => (
-                <CardPokemon pokemon={pokemon} key={`${index}-${pokemon.id}`} />
+                <CardPokemon pokemon={pokemon} key={`${index}-${pokemon.id}`}/>
             ))}
         </div>
     );

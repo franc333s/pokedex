@@ -1,12 +1,10 @@
+const Favorites = () => {
 
-
-function Favorites() {
-
-    return (
-		<>
-            <div className="">This is the favorites</div>
-        </>
-    )
-}
+  return (
+    <div className='vertical-padding'>
+        <h2>Favorite Pokemons</h2>
+    </div>
+  );
+};
 
 export default Favorites;

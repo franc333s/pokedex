@@ -1,15 +1,5 @@
 @import './sass-variables';
 
-// Loop for text color and background colors with general colors
-@each $color, $i in $map-colors {
-    .text-color-#{$color} {
-        color: $i;
-    }
-
-    .bg-color-#{$color} {
-        background-color: $i;
-    } 
-}
 
 // Loop for text color and background colors with stats colors
 @each $color, $i in $map-colors-stats {
