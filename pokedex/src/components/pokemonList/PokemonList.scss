@@ -1,0 +1,26 @@
+@import '../../scss/mixins';
+@import '../../scss/sass-variables';
+
+
+.pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1.2rem, 1.83vw + 0.49rem, 4rem);
+
+    @include mq($bp-uppermedium) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mq($bp-xlarge) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &.list {
+        display: block;
+    }
+}
+
+.list .card {
+    display: flex;
+}
+

@@ -1,0 +1,11 @@
+@import './sass-variables';
+
+
+// Loop for text color and background colors with stats colors
+@each $color, $i in $map-colors-stats {
+
+    .bar-color-#{$color} {
+        background-color: $i;
+    } 
+}
+

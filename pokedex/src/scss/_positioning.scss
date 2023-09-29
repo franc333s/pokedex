@@ -1,0 +1,23 @@
+@import './sass-variables';
+@import './mixins';
+
+
+.pokedex {
+
+    &__grid-list-btn {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1.2rem 0;
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        gap: $flex-gap-small;
+        padding: 4rem 0;
+    }
+}
+
+
+
+

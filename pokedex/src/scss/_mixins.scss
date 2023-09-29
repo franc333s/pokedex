@@ -1,0 +1,7 @@
+
+// Mq mixin
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+    @media all and ($bp-width: $bp) {
+      @content;
+    }
+}

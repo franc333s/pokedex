@@ -1,0 +1,102 @@
+@import '../../scss/sass-variables';
+@import '../../scss/mixins';
+
+
+.pokemon {
+    min-height: calc(100vh - 8.2rem);
+    font-size: $font-size-p;
+    padding-top: 4rem;
+
+    &__id {
+
+        @include mq($bp-medium) {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: $flex-gap-base;
+        }
+
+        &__name {
+            text-transform: capitalize;
+        }
+
+        &__id {
+            font-size: $font-size-p-big;
+        }
+    }
+
+    &__info {
+
+        &-flex {
+
+            @include mq($bp-lowermedium) {
+                display: flex;
+                justify-content: center;
+                gap: clamp(4rem, 10.46vw + -0.08rem, 20rem);
+            }
+        }
+
+        &__figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: $flex-gap-base;
+
+            @include mq($bp-lowermedium) {
+                align-items: center;
+            }
+
+            &__img {
+                padding-top: clamp(2rem, 2.61vw + 0.98rem, 6rem);
+                width: 100%;
+            }
+        }
+
+        &__details {
+            padding-top: clamp(4rem, 5.23vw + 1.96rem, 12rem);
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                gap: $flex-gap-v-small;
+                padding-bottom: 2rem;
+            }
+        }
+
+        &__stats {
+            padding-top: clamp(4rem, 1.31vw + 3.49rem, 6rem);
+
+            &__item {
+
+                &__pb {
+                    border-radius: 4rem;
+                    height: 10px;
+                }
+            }
+        }
+
+        &__details,
+        &__stats {
+
+            & h2 {
+                font-size: $font-size-p-big;
+                text-transform: capitalize;
+                padding-bottom: 1.2rem;
+            }
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                gap: $flex-gap-v-small;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+
+    &__return-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0 8rem;
+    }
+}

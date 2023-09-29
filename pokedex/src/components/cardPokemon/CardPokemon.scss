@@ -1,0 +1,116 @@
+@import '../../scss/sass-variables';
+@import '../../scss/mixins';
+
+
+.card {
+    color: $color-black;
+    font-size: $font-size-p-small;
+    text-decoration: none;
+    background: $color-bg-off-white;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-bottom: clamp(1.2rem, 1.83vw + 0.49rem, 4rem);
+    transition: $hover-transition;
+
+    &:hover {
+        box-shadow: 0 0 .6rem $color-purple-dark-trans;
+    }
+
+    &__img {
+        height: 14rem;
+        width: 14rem;
+        margin-right: clamp(3.2rem, 1.05vw + 2.79rem, 4.8rem);
+
+        @include mq($bp-lowermedium) {
+            margin-left: clamp(1.2rem, 1.83vw + 0.49rem, 4rem);
+        }
+    }
+
+    &--flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: clamp(2rem, 3.92vw + 0.47rem, 8rem);
+
+        @include mq($bp-lowermedium) {
+            flex-direction: row;
+        }
+
+        &__second {
+            
+            @include mq($bp-lowermedium) {
+                padding-top: clamp(0.2rem, 0.13vw + 0.15rem, 0.4rem);
+            }
+        }
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: $flex-gap-small;
+
+        @include mq($bp-lowermedium) {
+            gap: 0;
+            justify-content: space-between;
+        }
+
+        &__name {
+            text-transform: capitalize;
+            padding-bottom: .4rem;
+        }
+    }
+}
+
+.grid .card {
+    margin-bottom: 0;
+
+    &__img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: clamp(1.2rem, 1.83vw + 0.49rem, 4rem);
+    }
+
+    &__img {
+        margin-right: 0;
+        height: clamp(10rem, 9.15vw + 6.43rem, 24rem);
+        width: clamp(10rem, 9.15vw + 6.43rem, 24rem);
+    }
+
+    &--flex {
+
+        &__second {
+            padding-top: 0;
+
+            @include mq($bp-lowermedium) {
+                padding-top: clamp(0.2rem, 0.13vw + 0.15rem, 0.4rem);
+            }
+        }
+    }
+
+    &__desc {
+
+        &__id {
+
+            @include mq($bp-lowermedium) {
+                padding-bottom: 2rem;
+            }
+            
+        }
+    }
+}
+
+#dark {
+
+    & .card {
+        color: $color-white;
+        background-color: $color-bg-purple;
+        transition: $hover-transition;
+
+        &:hover {
+            box-shadow: 0 0 .8rem $color-off-white-trans;
+        }
+    }
+}
+
+
